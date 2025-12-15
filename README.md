@@ -1,4 +1,4 @@
-**Read this in other languages: [简体中文](README.zh.md)
+**Read this in other languages: [简体中文](README_zh.md)
 # yoloe_demo
 a demo of yoloe, including gradio app demo , yoloe inference and train
 ## Capabilities
