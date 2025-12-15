@@ -131,7 +131,6 @@ def create_app(model_dir="models"):
                 with gr.Column():
                     output_image = gr.Image(type="numpy", label="Annotated Image", visible=True)
             
-            # UI update functions
             def update_text_image_visibility():
                 return gr.update(value="Text"), gr.update(visible=True), gr.update(visible=False), gr.update(visible=False), gr.update(visible=False)
             def update_visual_image_visiblity(visual_prompt_type, visual_usage_type):
@@ -154,7 +153,6 @@ def create_app(model_dir="models"):
                     return gr.update(visible=True)
                 return gr.update(visible=False)
             
-            # Bind UI updates
             text_tab.select(
                 fn=update_text_image_visibility,
                 inputs=None,
@@ -181,7 +179,6 @@ def create_app(model_dir="models"):
                 outputs=[target_image]
             )
             
-            # Inference function
             def run_inference(raw_image, box_image, mask_image, target_image, texts, model_id, image_size, conf_thresh, iou_thresh, prompt_type, visual_prompt_type, visual_usage_type):
                 # Text or Prompt-free
                 if prompt_type == "Text" or prompt_type == "Prompt-free":
@@ -200,7 +197,6 @@ def create_app(model_dir="models"):
                     prompts = {
                         "texts": texts
                     }
-                # Visual prompt
                 elif prompt_type == "Visual":
                     if visual_usage_type != "Cross-Image":
                         target_image = None
@@ -265,7 +261,7 @@ def main():
         with open("tools/ram_tag_list.txt", "w") as f:
             for tag in default_tags:
                 f.write(f"{tag}\n")
-        print("创建了默认的ram_tag_list.txt文件")
+        print("创建默认的ram_tag_list.txt文件")
     
     gradio_app.launch(
         server_name="0.0.0.0",
