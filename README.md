@@ -11,3 +11,4 @@ pip install gradio==4.42.0 gradio_image_prompter==0.1.0 fastapi==0.112.2 hugging
 python yoloe_gradio_demo.py
 # visit http://127.0.0.1:80
 ```
+If you encounter pip-related issues, comment out "import pip" in file "yoloe/third_party/lvis-api/setup.py"
