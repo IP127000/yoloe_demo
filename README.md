@@ -1,6 +1,9 @@
+[简体中文](README.zh.md)
 # yoloe_demo
 a demo of yoloe, including gradio app demo , yoloe inference and train
-
+## Capabilities
+Unlike traditional CV detection models, YOLOE is capable of abstract semantic detection, such as identifying a "person who needs help." It can be applied in security surveillance and home monitoring scenarios
+![person who need help](images/example_1.webp)
 ## Usage
 ```bash
 git clone https://github.com/THU-MIG/yoloe.git
