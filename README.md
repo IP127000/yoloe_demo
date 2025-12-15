@@ -2,7 +2,9 @@
 # yoloe_demo
 a demo of yoloe, including gradio app demo , yoloe inference and train
 ## Capabilities
-Unlike traditional CV detection models, YOLOE is capable of abstract semantic detection, such as identifying a "person who needs help." It can be applied in security surveillance and home monitoring scenarios
+Unlike traditional CV detection models, YOLOE is capable of abstract semantic detection, 
+such as identifying a "person who needs help" 
+It can be applied in security surveillance and home monitoring scenarios
 
 <img src="images/example_1.webp" width="50%" alt="person who need help">
 
